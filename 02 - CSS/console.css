@@ -1,1 +1,7 @@
-
+#console {
+  background: black;
+  color: green;
+  width: 640px;
+  height: 400px;
+  padding: 5px;
+}
