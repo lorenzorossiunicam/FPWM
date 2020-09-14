@@ -1,3 +1,31 @@
-.social a {
-    background: green;
+body {
+  margin: 0px;
+  font-family: Roboto;
+}
+
+#profilo{
+  width: 150px;
+  border-radius: 50%;
+  margin: auto;
+  display: block;
+}
+
+nav {
+  position: fixed;
+  width: 25vw;
+  background: orange;
+  height: 100vh;
+  padding: 10px;
+  text-align: center;
+}
+
+#main{
+  width: 70vw;
+  float: right;
+
+}
+
+.sezione{
+  height: 100vh;
+  padding: 20px;
 }

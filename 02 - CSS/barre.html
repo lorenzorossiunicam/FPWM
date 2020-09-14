@@ -3,10 +3,117 @@
   <head>
     <meta charset="utf-8">
     <title>Grafico a Barre</title>
+    <style media="screen">
+      #grafico {
+        width: 600px;
+        color: lightblue;
+      }
+
+      div.riga>hr {
+        border: 1px solid lightblue;
+        float: right;
+        width: 98%;
+      }
+
+      div.riga {
+        margin-top: 30px;
+      }
+
+      .barre {
+        position: relative;
+        bottom: 10px;
+        left: 30px;
+        transform: rotate(180deg);
+
+      }
+
+      .barra {
+        width: 20px;
+        float: right;
+        margin-right: 5px;
+      }
+
+      .blu{
+          background: blue;
+      }
+      .rosso{
+          background: red;
+      }
+      .grigio{
+          background: gray;
+      }
+
+      .al-2 {
+        height: 100px;
+      }
+      .al-3 {
+        height: 150px;
+      }
+      .al-4 {
+        height: 195px;
+      }
+      .al-5 {
+        height: 250px;
+      }
+
+
+      .separatore{
+        width: 20px;
+        height: 10px;
+        float: right;
+      }
+
+    </style>
   </head>
   <style media="screen">
   </style>
   <body>
-  
+    <div id="grafico">
+      <div class="sfondo">
+        <div class="riga">6 <hr></div>
+        <div class="riga">5 <hr></div>
+        <div class="riga">4 <hr></div>
+        <div class="riga">3 <hr></div>
+        <div class="riga">2 <hr></div>
+        <div class="riga">1 <hr></div>
+        <div class="riga">0 <hr></div>
+      </div>
+      <div class="barre">
+        <div class="barra blu al-4">
+        </div>
+        <div class="barra rosso al-2">
+        </div>
+        <div class="barra grigio al-2">
+        </div>
+        <div class="separatore">
+
+        </div>
+        <div class="barra blu al-2" >
+        </div>
+        <div class="barra rosso al-4">
+        </div>
+        <div class="barra grigio al-2">
+        </div>
+        <div class="separatore">
+
+        </div>
+        <div class="barra blu al-3" >
+        </div>
+        <div class="barra rosso al-2">
+        </div>
+        <div class="barra grigio al-3">
+        </div>
+        <div class="separatore">
+
+        </div>
+        <div class="barra blu al-5" >
+        </div>
+        <div class="barra rosso al-3">
+        </div>
+        <div class="barra grigio al-5">
+        </div>
+      </div>
+    </div>
+
   </body>
 </html>
