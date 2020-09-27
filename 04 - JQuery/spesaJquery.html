@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script>
+$(document).ready(function(){
+  $('#aggiungi').click(function(){
+    $('#lista').append("<tr><th>"+$('#ogg').val()+"</th><th>"+$('#qnt').val()+"</th><th><p class='checkbox'>a</p></th><th ><i class='fa fa-trash' aria-hidden='true'></i></th></tr>");
+    $('.checkbox').click(function(){
+      $(this).toggleClass('preso');
+      if ($(this).attr('class') == "checkbox preso"){
+        $(this).empty().append('<i class="fa fa-check" aria-hidden="true"></i>');
+      } else {
+        $(this).text('ciao');
+      }
+    });
+    $('.fa-trash').click(function(){
+      $(this).parent().parent().remove();
+    });
+  });
+  $('#clear').click(function(){
+    $('table>tr').remove();
+  });
+  $(hide).click(function(){
+    var info = $("#info");
+    if(info.attr('class') == "open"){
+      info.animate({bottom: '-100px'});
+      $(this).empty().append('<i class="fa fa-angle-double-up" aria-hidden="true"></i>');
+    }else {
+      info.animate({bottom: '0px'});
+      $(this).empty().append('<i class="fa fa-angle-double-down" aria-hidden="true"></i>');
+    }
+    info.toggleClass('open');
+  });
+});
+</script>
+<style>
+  .container {
+    display: inline !important;
+  }
+
+  .container{
+  width:500px;
+  display:flex;
+}
+.box{
+  width: 100px;
+  height: 100px;
+  background: red;
+  margin: 5px;
+}
+.check {
+  border: solid 1px;
+}
+#info{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: darkgrey;
+}
+#hide{
+  position: relative;
+  top: -30px;
+  left: 10px;
+  background: darkgrey;
+  width: 30px;
+  height: 30px;
+  padding-left: 19px;
+  padding-top:7px;
+  border-radius: 15px 15px 0px 0px;
+}
+#hide.p{
+  font-size: 10pt;
+}
+</style>
+</head>
+<body>
+  <h1>Lista della Spesa</h1>
+
+<div class="container">
+  <div id="nuovo">
+    <h3>Aggiungi oggetto</h3>
+  <label for="ogg">Oggetto:</label><br>
+  <input type="text" id="ogg" name="ogg" placeholder="Latte"><br>
+  <label for="qnt">Quantità:</label><br>
+  <input type="text" id="qnt" name="qnt" placeholder="3l"><br><br>
+  <button type="button" id="aggiungi">Aggiungi</button>
+  <button type="button" id="clear">Cancella Lista</button>
+</div>
+<p></p>
+  <table id="lista">
+    <thead><tr><th>Oggetto</th><th>Quantità</th><th>Check</th></tr><th></th></thead>
+  </table>
+</div>
+<div id="info"class="open">
+  <div id="hide">
+    <i class="fa fa-angle-double-down" aria-hidden="true"></i>
+  </div>
+  <div style="position:relative; top:-50px; left:10px;">
+    <h6>Info</h6>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+  $(document).ready(function(){
+    $("#invia").click(function(){
+      $.post("http://localhost:3001/testo",
+        {"msg": $("#area").val()},
+        function(data,status,xhr){
+          console.log([data,status,xhr]);
+        });
+      });
+      $("#recupera").click(function(){
+        $.get("http://localhost:3001/testo",
+          function(data,status){
+            console.log([data,status]);
+            $('#par').empty().append(data);
+        });
+      });
+  });
+  </script>
+</head>
+  <body id="body">
+   <textarea name="area" id="area" rows="8" cols="80"></textarea>
+   <button type="button" id="invia">Invia</button>
+   <button type="button" id="recupera">Recupera</button>
+   <p id="par"></p>
+
+  </body>
+</html>

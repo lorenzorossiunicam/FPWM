@@ -1,0 +1,2 @@
+Questo è semplice testo in un file .txt
+Ciao cial

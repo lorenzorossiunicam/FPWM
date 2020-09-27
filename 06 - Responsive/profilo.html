@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Profilo</title>
+    <link rel="stylesheet" href="stili/profilo.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+      function creaP(){
+        var headerHome = document.getElementById("home");
+        var newP = document.createElement("p");
+        newP.style.background = "red";
+        newP.innerHTML = "Bla bla bla";
+        headerHome.appendChild(newP);
+      }
+    </script>
+  </head>
+  <body>
+
+    <nav>
+      <img id="profilo" src="img/profilo.jpg" alt="immagine del profilo"><br>
+
+      <a href="#main">Home</a><br>
+      <a href="#bio">Chi sono</a><br>
+      <a href="#esperienze">Esperienze</a><br>
+      <a href="#hobby">Hobby</a><br>
+
+
+      </div>
+      <div class="social">
+        <a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
+        <a href="#" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
+        <a href="#" target="_blank"><i class="fa fa-instagram fa-2x"></i></a>
+        <a href="#" target="_blank"> <i class="fa fa-linkedin fa-2x"></i></a>
+      </div>
+    </nav>
+
+
+
+    <div id="main">
+      <header id="home" class="sezione">
+        <h1>Sito di Mario Rossi</h1>
+        <h4>
+          <i>Sono il padrone del mio destino</i>
+        </h4>
+        <button type="button" name="button" onclick="creaP()">Premi qua!</button>
+      </header>
+
+      <section class="sezione" id="bio">
+        <h2>Chi Sono</h2>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </section>
+
+
+      <section class="sezione" id="esperienze">
+        <h2>Esperienze</h2>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </section>
+
+
+      <section class="sezione" id="hobby">
+        <h2>Hobby</h2>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </section>
+
+    </div>
+
+  </body>
+</html>

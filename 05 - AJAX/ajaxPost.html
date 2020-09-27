@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $.post("https://api.postcodes.io/postcodes",
+      {
+        "postcodes" : [$("#capcode").val()]
+      },
+      function(data,status,xhr){ 
+        console.log([data,status,xhr]);
+        $('#data').empty();
+        for(k in data.result[0].result){
+          $('#data').append("<span>"+k+" --> "+data.result[0].result[k]+"</span><br>");
+        }
+      });
+    });
+});
+</script>
+</head>
+<body id="body">
+<label for="cap">Inserisci un cap inglese</label>
+<input type="text" name="cap" id="capcode" value="EC1A 4JA"></input>
+<button>Send an HTTP POST request</button><br>
+<div id="data"></div> 
+</body>
+</html>

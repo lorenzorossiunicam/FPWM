@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+  $(document).ready(function(){
+    $("#preno").submit(function(){
+      $.post("http://localhost:3001/prenotazioni",
+        {
+          "nome" : $("#nome").val(),
+          "cognome" : $("#cognome").val(),
+          "mail" : $("#mail").val(),
+          "data" : $("#data").val(),
+          "trattamento" : $("#trattamento option:selected").val(),
+        },
+        function(data,status,xhr){
+          console.log([data,status,xhr]);
+          $('#data').empty();
+          for(k in data.result[0].result){
+            $('#data').append("<span>"+k+" --> "+data.result[0].result[k]+"</span><br>");
+          }
+        });
+      });
+  });
+  </script>
+</head>
+  <body id="body">
+    <form id="preno">
+      N <input type="text" id="nome">
+      C <input type="text"  id="cognome">
+      T <input type="tel"  id="recapito">
+      M <input type="email"  id="mail">
+      D <input type="datetime-local"  id="data">
+      S <select class="" id="trattamento">
+          <option value="shampoo">uno</option>
+          <option value="taglio">due</option>
+          <option value="piega">tre</option>
+        </select>
+        <input type="submit" id="prenota">
+    </form>
+  </body>
+</html>

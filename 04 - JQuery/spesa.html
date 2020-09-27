@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Lista della Spesa</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <h1>Lista della spesa</h1><br />
+    <h3>Aggiungi oggetto</h3><br />
+    <label for ="oggetto">Oggetto</label>
+    <input type="text" id="oggetto" name ="oggetto" /><br />
+    <label for ="quantita">Quantità</label>
+    <input type ="text" id="quantita" name="quantita" /><br />
+    <button type ="button" onclick="aggiungi()">Aggiungi</button>
+    <button type ="button" id="svuota">Svuota</button>
+
+    <h2>Lista</h2><br />
+    <table>
+      <thead>
+        <th>Oggetto</th>
+        <th>Quantità</th>
+        <th>Preso</th>
+        <th>Cancella</th>
+      </thead>
+      <tbody id="tbody">
+      </tbody>
+    </table>
+
+
+  </body>
+  <script type= "text/javascript">
+
+  function funzione(){
+    alert(111);
+  }
+
+  function aggiungi(){
+    var ogg =document.getElementById("oggetto").value;
+    var qnt = document.getElementById("quantita").value;
+    var tbody = document.getElementById("tbody");
+    var riga = document.createElement("tr");
+
+    var cellaOgg = document.createElement("td");
+    var cellaQnt= document.createElement("td");
+    var cellaPre = document.createElement("td");
+    var cellaCanc= document.createElement("td");
+    cellaOgg.innerHTML=ogg;
+    cellaQnt.innerHTML=qnt;
+    cellaPre.innerHTML="<input type='checkbox' />";
+    var cancel = document.createElement("button");
+    cancel.innerHTML = "X";
+
+    cancel.onclick = funzione();
+    cellaCanc.innerHTML="<button class='canc'>x</button>";
+
+    riga.appendChild(cellaOgg);
+    riga.appendChild(cellaQnt);
+    riga.appendChild(cellaPre);
+    riga.appendChild(cellaCanc);
+    tbody.appendChild(riga);
+  }
+
+$(document).ready(function(){
+    $("#svuota").click(function(){
+      $("#tbody").empty();
+
+    });
+
+});
+
+
+  </script>
+</html>

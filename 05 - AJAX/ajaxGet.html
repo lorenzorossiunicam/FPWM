@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+   $("#html-i").click(function(){
+     $.get("https://freegeoip.app/json/", function(data, status, xhr){ 
+       for (var key in data) {
+         $("#div").append("<span>"+key+" -> "+data[key]+"</span><br>");
+       }
+
+  });
+
+   });
+});
+</script>
+</head>
+<body>
+  <h1>Get AJAX</h1>
+  <p></p>
+  <div id="div"></div><br>
+  <button type="button" name="button" id="html-i">carica dati connessione</button>
+</body>
+</html>

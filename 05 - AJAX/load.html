@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+   $("#txt").click(function(){
+     $("#area").load("./ajax.txt");
+   });
+   $("#html").click(function(){
+     $("#div").load("./ajax.html");
+   });
+   $("#html-i").click(function(){
+     $("#div").load("./ajax.html i");
+   });
+});
+</script>
+</head>
+<body>
+  <h1>Load AJAX</h1>
+  <p></p>
+  <textarea name="area" id="area" rows="8" cols="80" placeholder="premi sotto..."></textarea><br>
+  <button type="button" name="button" id="txt">load("ajax.txt")</button>
+  <div id="div">premi sotto...</div><br>
+  <button type="button" name="button" id="html">load("ajax.html")</button>
+  <button type="button" name="button" id="html-i">load("ajax.html i")</button>
+</body>
+</html>
